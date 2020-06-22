@@ -6,20 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="description" content="Welcome To Champions Home">
     <meta name="keywords" content="gym, jordan, amman, boxing">
-    <link rel="stylesheet" type="text/css" href="css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/shared/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/shared/utillity.css">
-    <link rel="stylesheet" type="text/css" href="css/shared/nav.css">
-    <link rel="stylesheet" type="text/css" href="css/shared/footer.css">
+    <link rel="stylesheet" type="text/css" href="static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="static/css/shared/reset.css">
+    <link rel="stylesheet" type="text/css" href="static/css/shared/utillity.css">
+    <link rel="stylesheet" type="text/css" href="static/css/shared/nav.css">
+    <link rel="stylesheet" type="text/css" href="static/css/shared/footer.css">
     <!-- <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css"> -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <title>Elite knights</title>
 </head>
 <body>
     <header>
         <nav id="navbar">
             <div class="container">
-                <a href="index.html"><img class="logo" src="img/Gray Logo.png" alt=""></a>
+                <a href="index.html"><img class="logo" src="static/img/Gray Logo.png" alt=""></a>
                 <ul>
                         <li><a class="current" href="index.html">Home</a></li>
                         <li><a  href="blog.html">Blog</a></li>
@@ -52,16 +53,16 @@
     </section>
     <section id="features">
         <div class="box bg-light">
-            <img class="box-img" src="./icons/strength.png">
+            <img class="box-img" src="static/icons/strength.png">
             <h3>Strength</h3>
             <p class="text">Body conditioning refers to exercises that increase your strength, speed, endurance or any other physical attribute. Conditioning workouts can trim fat, increase muscle tone and prepare your body for the rigors of sports.</p>
         </div>
         <div class="box bg-primary">
-            <img class="box-img" src="./icons/boxing.png">
+            <img class="box-img" src="static/icons/boxing.png">
             <h3>Boxing</h3>
             <p class="text">Boxing is a combat sport in which two people, usually wearing protective gloves, throw punches at each other for a predetermined amount of time in a boxing ring.</p></div>
         <div class="box bg-light">
-            <img class="box-img" src="./icons/mobility.png">
+            <img class="box-img" src="static/icons/mobility.png">
             <h3>Mobility</h3>
             <p class="text">reducing the risk for injuries, allows for full benefits of exercise by moving limbs through their respective full range of motion, and helps you move better whether that is for daily activities or for sport.</p></div>
     </section>
@@ -69,5 +70,16 @@
     <footer id="main-footer" class="text">
         <p>Gym Elite Knights &copy; 2020, All Right Reserved</p>
     </footer>
+    <script>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      </script>
 </body>
 </html>
